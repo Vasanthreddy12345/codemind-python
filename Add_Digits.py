@@ -1,10 +1,10 @@
 n=int(input())
-while n:
-    sum=0
-    while n:
-        sum=sum+n%10
-        n=n//10
-    n=sum
-    if n<10:
-        break
-print(n)
+s=0
+while n>0:
+    r=n%10
+    s=s+r
+    n=n//10
+    if n==0 and s>9:
+        n=s
+        s=0
+print(s)
