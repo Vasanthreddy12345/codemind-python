@@ -1,8 +1,9 @@
 n=int(input())
 for i in range(1,n+1):
-    for j in range(1,n+1):
-      if j==i or j==n+1-i:
-        print(n+1-i,"",end='')
-      else:
-          print(" ",end="")
+    for j in range(1,n+1-i):
+        print(" ",end='')
+    for j in range(1,i):
+        print(chr(64+j),end="")
+    for j in range(i,0,-1):
+        print(chr(64+j),end="")
     print()
